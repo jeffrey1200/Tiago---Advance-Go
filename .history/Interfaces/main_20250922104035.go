@@ -78,18 +78,6 @@ func main() {
 	// }
 	normalTruck := &NormalTruck{id: "1"}
 	electricTruck := &ElectricTruck{id: "2"}
-
-	person := make(map[string]interface{}, 0)
-	person["name"] = "Jeffrey"
-	person["age"] = 27
-
-	age, exists := person["age"].(int)
-	if !exists {
-		log.Fatal("age does not exists")
-		return
-	}
-	log.Println(age)
-	
 	err := processTruck(normalTruck)
 	if err != nil {
 		log.Fatalf("Error processing truck: %s", err)
